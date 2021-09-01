@@ -31,6 +31,9 @@ gem 'bootsnap', '>= 1.4.4', require: false
 # user authentication 
 gem 'devise'
 
+# Pundit for background authorization
+gem 'pundit'
+
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass'
 gem 'simple_form'
