@@ -6,6 +6,9 @@
         <th scope="col">Name</th>
         <th scope="col">Year</th>
         <th scope="col">Artist</th>
+        <% if current_user.admin? %>
+          <th scope="col">Action</th>
+        <% end %>
       </tr>
     </thead>
     <tbody>
@@ -13,6 +16,11 @@
           <td><%= @album.album_name %></td>
           <td><%= @album.year %></td>
           <td><%= @album.artist %></td>
+          <% if current_user.admin? %>
+            <td>
+              <%= link_to  "Destroy", album_path(@album), method: "DELETE", data: { confirm: "Are you sure?"} %>
+            </td>
+          <% end %>
         </tr>   
     </tbody>
   </table>

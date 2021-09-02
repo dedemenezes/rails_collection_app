@@ -41,6 +41,7 @@ class AlbumsController < ApplicationController
   def destroy
     if @album.destroy
       redirect_to albums_path
+      flash[:notice] = "Album destroyed"
     else
       render :show
     end

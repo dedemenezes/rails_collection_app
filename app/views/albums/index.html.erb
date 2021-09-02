@@ -9,6 +9,7 @@
       <tr>
         <th scope="col">Artist</th>
         <th scope="col">Album Name</th>
+        <th scope="col">Information</th>
       </tr>
     </thead>
     <tbody>
@@ -16,6 +17,9 @@
         <tr>
           <td><%= album.artist %></td>
           <td><%= album.album_name %></td>
+          <td>
+            <%= link_to  "Check album", album_path(album) %>
+          </td>
         </tr>   
       <% end %>
     </tbody>
