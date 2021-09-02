@@ -1,5 +1,4 @@
 require 'faraday'
-require 'open-uri'
 class AlbumsController < ApplicationController
 
   def index
@@ -8,9 +7,8 @@ class AlbumsController < ApplicationController
 
   def new
     @album = Album.new
-    response = URI.open('https://www.moat.ai/api/task/', "Basic" => "ZGV2ZWxvcGVyOlpHVjJaV3h2Y0dWeQ==")
-    @task = Faraday.get("https://www.moat.ai/api/task/", "Basic" => "ZGV2ZWxvcGVyOlpHVjJaV3h2Y0dWeQ==")
-    raise
+    response = Faraday.get("https://www.moat.ai/api/task/", {params: nil}, { "Basic" => "ZGV2ZWxvcGVyOlpHVjJaV3h2Y0dWeQ=="})
+    artists = JSON.parse(response.body)
     @task
   end
 end
