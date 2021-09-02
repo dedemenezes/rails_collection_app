@@ -27,7 +27,15 @@ class AlbumsController < ApplicationController
   end
   
   def edit
-    
+  end
+
+  def update
+    if @album.update(album_params)
+      redirect_to album_path(@album)
+      flash[:notice] = "Album updated!"
+    else
+      render :edit
+    end
   end
 
   private
