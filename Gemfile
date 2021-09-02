@@ -34,6 +34,9 @@ gem 'devise'
 # Pundit for background authorization
 gem 'pundit'
 
+# HTTP/REST API client library.
+gem 'faraday'
+
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass'
 gem 'simple_form'
