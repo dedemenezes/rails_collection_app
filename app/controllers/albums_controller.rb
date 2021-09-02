@@ -38,6 +38,14 @@ class AlbumsController < ApplicationController
     end
   end
 
+  def destroy
+    if @album.destroy
+      redirect_to albums_path
+    else
+      render :show
+    end
+  end
+
   private
 
   def set_album

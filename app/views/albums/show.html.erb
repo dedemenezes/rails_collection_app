@@ -2,7 +2,10 @@
   <div class="menu">
     <ul>
       <li>
-        <%= link_to  "Edit", edit_album_path %>
+        <%= link_to  "Edit", edit_album_path(@album) %>
+      </li>
+      <li>
+        <%= link_to "Destroy", album_path(@album), method: "DELETE", data: {confirm: "Are you sure?"} %>
       </li>
     </ul>
   </div>
