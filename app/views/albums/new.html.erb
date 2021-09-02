@@ -3,5 +3,6 @@
     <%= f.input :artist, collection: Requests::Artists.names %>
     <%= f.input :album_name %>
     <%= f.input :year %>
+    <%= f.submit "Create album", class: 'btn-form' %>
   <% end %>
 </div>
