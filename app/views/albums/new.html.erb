@@ -1,5 +1,5 @@
-<div class="container">
 <%= link_to  "Back", albums_path %>
+<div class="container">
   <%= simple_form_for @album do |f| %>
     <%= f.input :artist, collection: @artists %>
     <%= f.input :album_name %>
