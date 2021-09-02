@@ -1,0 +1,18 @@
+<div class="container">
+  <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Twitter</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @artists.each.with_index do |artist, index| %>
+      <tr>
+        <td><%= artist.first['twitter'] %></td>
+        <td><%= artist.first['name'] %></td>
+      </tr>   
+    <% end %>
+  </tbody>
+</table>
+</div>
