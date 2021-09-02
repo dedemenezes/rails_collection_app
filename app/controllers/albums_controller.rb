@@ -1,6 +1,6 @@
 require 'faraday'
 class AlbumsController < ApplicationController
-  before_action :set_album, except: %i( new create)
+  before_action :set_album, except: %i( index new create)
 
   def index
     @albums = policy_scope(Album)
