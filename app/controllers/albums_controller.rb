@@ -5,10 +5,11 @@ class AlbumsController < ApplicationController
     @albums = policy_scope(Album)
   end
 
-  
+
 
   def new
     @album = Album.new
+    @artists = Requests::Artists.names 
     authorize @album
   end
 
