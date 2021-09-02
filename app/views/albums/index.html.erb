@@ -1,9 +1,14 @@
-<%= render 'shared/banner' %>
-
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-6 offset-3">
       <%= link_to  "Create an album", new_album_path, class: 'text-center' %>
+    </div>
+    <div class="cards">
+      <% @albums.each do |album| %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+  <%= album.album_name %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
