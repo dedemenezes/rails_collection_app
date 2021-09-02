@@ -1,0 +1,9 @@
+<div class="container">
+<%= link_to  "Back", album_path(@album) %>
+  <%= simple_form_for @album do |f| %>
+    <%= f.input :artist, collection: @artists %>
+    <%= f.input :album_name %>
+    <%= f.input :year %>
+    <%= f.submit "Create album", class: 'btn-form' %>
+  <% end %>
+</div>

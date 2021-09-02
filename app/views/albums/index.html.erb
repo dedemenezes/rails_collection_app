@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row d-flex">
+    <div class="col-xs-12 col-sm-6 btn-create my-3 text-center">
+      <%= link_to  "Create an album", new_album_path %>
+    </div>
+    <div class="col-xs-12 col-sm-6  btn-artist btn-create my-3 text-center">
+      <%= link_to  "Check all artists", "#" %>
+    </div>
+  </div>
+    <div class="cards">
+      <% @albums.each do |album| %>
+        <%= link_to album_path(album) do %>
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/random)">
+            <%= album.album_name %>
+          </div>
+        <% end %>  
+      <% end %>
+    </div>
+</div>
