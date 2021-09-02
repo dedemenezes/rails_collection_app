@@ -4,13 +4,20 @@
       <%= link_to  "Create an album", new_album_path %>
     </div>
   </div>
-    <div class="cards">
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Artist</th>
+        <th scope="col">Album Name</th>
+      </tr>
+    </thead>
+    <tbody>
       <% @albums.each do |album| %>
-        <%= link_to album_path(album) do %>
-          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/random)">
-            <%= album.album_name %>
-          </div>
-        <% end %>  
+        <tr>
+          <td><%= album.artist %></td>
+          <td><%= album.album_name %></td>
+        </tr>   
       <% end %>
-    </div>
+    </tbody>
+  </table>
 </div>

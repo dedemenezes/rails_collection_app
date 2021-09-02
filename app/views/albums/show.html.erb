@@ -1,14 +1,19 @@
+<%= link_to  "Back", albums_path %>
 <div class="container">
-  <div class="menu">
-    <%= link_to  "Back", albums_path %>
-    <ul>
-      <li>
-        <%= link_to  "Edit", edit_album_path(@album) %>
-      </li>
-      <li>
-        <%= link_to "Destroy", album_path(@album), method: "DELETE", data: {confirm: "Are you sure?"} %>
-      </li>
-    </ul>
-  </div>
-  <%= @album.artist %>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Year</th>
+        <th scope="col">Artist</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><%= @album.album_name %></td>
+          <td><%= @album.year %></td>
+          <td><%= @album.artist %></td>
+        </tr>   
+    </tbody>
+  </table>
 </div>
