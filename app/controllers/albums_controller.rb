@@ -7,8 +7,8 @@ class AlbumsController < ApplicationController
 
   def new
     @album = Album.new
-    response = Faraday.get("https://www.moat.ai/api/task/", {params: nil}, { "Basic" => "ZGV2ZWxvcGVyOlpHVjJaV3h2Y0dWeQ=="})
-    artists = JSON.parse(response.body)
+    @artists = Requests::Artists.list
+    raise
     @task
   end
 end
