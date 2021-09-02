@@ -1,3 +1,4 @@
+require 'faraday'
 require 'open-uri'
 class AlbumsController < ApplicationController
 
@@ -7,7 +8,8 @@ class AlbumsController < ApplicationController
 
   def new
     @album = Album.new
-    @task = URI.open("https://moat.ai/api/task/", "Authorization" => "BasicZGV2ZWxvcGVyOlpHVjJaV3h2Y0dWeQ")
+    response = URI.open('https://www.moat.ai/api/task/', "Basic" => "ZGV2ZWxvcGVyOlpHVjJaV3h2Y0dWeQ==")
+    @task = Faraday.get("https://www.moat.ai/api/task/", "Basic" => "ZGV2ZWxvcGVyOlpHVjJaV3h2Y0dWeQ==")
     raise
     @task
   end
