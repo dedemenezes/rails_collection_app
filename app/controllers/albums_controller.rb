@@ -7,8 +7,6 @@ class AlbumsController < ApplicationController
 
   def new
     @album = Album.new
-    @artists = Requests::Artists.list
     authorize @album
-    @task
   end
 end
