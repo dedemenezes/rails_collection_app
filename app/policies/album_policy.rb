@@ -6,6 +6,6 @@ class AlbumPolicy < ApplicationPolicy
   end
 
   def new?
-    
+    true
   end
 end
