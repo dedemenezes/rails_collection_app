@@ -2,7 +2,7 @@
 Hosted on Heroku: [Collection Builder](http://collection-builders.herokuapp.com)
 
 ## Online Testing
-App hosted on Heroku already has two users:
+App hosted by Heroku already has two users:
 
 Admin user:
 ```ruby
