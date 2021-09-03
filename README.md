@@ -1,8 +1,8 @@
 # Collection App
-Hosted on Heroku: [Collection Builder](http://collection-builders.herokuapp.com)
+Hosted by Heroku: [Collection Builder](http://collection-builders.herokuapp.com)
 
 ## Online Testing
-App hosted by Heroku already has two users:
+App has two users:
 
 Admin user:
 ```ruby
